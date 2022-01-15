@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<!-- 핵심 : 1) 빈(인스턴스)등록과 의존 설정 (aaa)-->
+	<!-- 	  
+			2) 어노테이션 설정법...(bbb) 우린 이방식 사용할 것임. 컨테이너 가동하면 제일 중요한 설정 =>
+	 		   base-package: 하위 모든 클래스에 조사해서 component 어노테이션 붙인 전부다 인스턴스 생성됨, 컨테이너에 등록됨.(setter해줌.)	 		  
+	 -->
+	<context:component-scan base-package="polymorhism"></context:component-scan> 
+
+</beans>

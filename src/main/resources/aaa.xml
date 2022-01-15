@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 스프링 프레임워크 컨테이너 설정 파일 -->
+	<!-- 사실상 스프링프레임워크의 핵심 -->
+	<!-- 설정의 핵심 : 빈(인스턴스)등록과 의존 설정 -->
+	
+	<!-- bean 태그... 인스턴스 생성... -->
+	<bean id="tv" class="polymorhism.SamsungTv">
+		<property name="speaker" ref="sonySpeaker"></property> <!-- DI(dependency injection) : setSpeaker()호출 -->
+	</bean>
+	<!-- <bean id="x1" class="polymorhism.SamsungTv"></bean>  -->
+	<!-- <bean id="x2" class="polymorhism.LgTv"></bean>  -->
+	
+	<bean id="sonySpeaker" class="polymorhism.SonySpeaker"></bean>
+	<bean id="appleSpeaker" class="polymorhism.AppleSpeaker"></bean>
+</beans>
